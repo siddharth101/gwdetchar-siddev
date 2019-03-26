@@ -351,7 +351,7 @@ for i, channel in enumerate(sorted(alldata[0].keys())):
     if args.verbose:
         gprint("Efficiency/Deadtime: %.2f" % effdt)
         
-    a.append(scatter_segments[channel].active). # made this change, next 3 lines
+    a.append(scatter_segments[channel].active) # made this change, next 3 lines
     print(len(a))
     print(len(highsnrtrigs[names[0]))
 
