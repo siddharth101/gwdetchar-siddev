@@ -353,7 +353,7 @@ for i, channel in enumerate(sorted(alldata[0].keys())):
         
     a.append(scatter_segments[channel].active) # made this change, next 3 lines
     print(len(a))
-    print(len(highsnrtrigs[names[0]))
+    print(len(highsnrtrigs[names[0]]))
 
     # finalize plot
     if args.verbose:
