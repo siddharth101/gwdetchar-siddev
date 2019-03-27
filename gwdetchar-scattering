@@ -511,17 +511,19 @@ c = [item for i in b for item in i]
 d1 = [i for i in highsnrtrigs[names[0]] for j in c if i in j]
 e =  [j for i in highsnrtrigs[names[0]] for j in c if i in j]
 rows = zip(d1,e)    
-import csv
-with open("summary.csv",'wt') as ff:
-     ff.write("Gpstime")
-     ff.write(",")
-     ff.write("Segment")
-     ff.write("\n")
-     for i,j in rows:
-         ff.write(str(i))
-         ff.write(",")
-         ff.write(str(j))
-         ff.write("\n")                          
+data = Table([d1,e], names = ['Gpstime','Segment'])
+data.write('summary.csv')
+#import csv
+#with open("summary.csv",'wt') as ff:
+#     ff.write("Gpstime")
+#     ff.write(",")
+#     ff.write("Segment")
+#     ff.write("\n")
+#     for i,j in rows:
+#         ff.write(str(i))
+#         ff.write(",")
+#         ff.write(str(j))
+#         ff.write("\n")                          
 
 # -- finalize -----------------------------------------------------------------
 
